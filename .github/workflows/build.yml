@@ -9,5 +9,8 @@ on:
       - main
     type: [opened, synchronize, reopened, ready_for_review]
 jobs:
-  arm_sender_build_test:
+  build:
     runs-on: self-hosted
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
