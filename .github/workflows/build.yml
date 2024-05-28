@@ -1,0 +1,13 @@
+name: build utils
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    type: [opened, synchronize, reopened, ready_for_review]
+jobs:
+  arm_sender_build_test:
+    runs-on: self-hosted
